@@ -35,8 +35,8 @@ git checkout "$branch"
 
 echo "Tokenizing..."
 
-find . -name "$js" | xargs -I{} sed -e "$tokens" -i {} 
-find . -name "$css" | xargs -I{} sed -e "$tokens" -i {}
+find . -name "$js" | xargs -i{} sed -e "$tokens" -i {} 
+find . -name "$css" | xargs -i{} sed -e "$tokens" -i {}
 sed -e "s/latest/$ver/g" -i bower.json
 
 git add "$js"
